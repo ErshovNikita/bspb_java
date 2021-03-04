@@ -40,8 +40,6 @@ public class Lesson2point0 {
         int indexOutput = 0;
         for (int i = 0; i < sexBuffer.length; i++) {
             output[indexOutput] = name[sexBuffer[i]];
-            System.out.println(sexBuffer[i]);
-            System.out.println(ageBuffer[i]);
             System.out.println(output[i]);
             indexOutput++;
         }
