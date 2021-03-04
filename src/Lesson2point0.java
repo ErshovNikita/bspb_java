@@ -27,11 +27,23 @@ public class Lesson2point0 {
             for (int i = 1; i < ageBuffer.length; i++) {
                 if (ageBuffer[i] < ageBuffer[i - 1]) {
                     int temp = ageBuffer[i];
+                    int temp1 = sexBuffer[i];
                     ageBuffer[i] = ageBuffer[i - 1];
+                    sexBuffer[i] = sexBuffer[i - 1];
                     ageBuffer[i - 1] = temp;
+                    sexBuffer[i - 1] = temp1;
                     isSorted = false;
                 }
             }
+        }
+        String[] output = new String[counter];
+        int indexOutput = 0;
+        for (int i = 0; i < sexBuffer.length; i++) {
+            output[indexOutput] = name[sexBuffer[i]];
+            System.out.println(sexBuffer[i]);
+            System.out.println(ageBuffer[i]);
+            System.out.println(output[i]);
+            indexOutput++;
         }
 
     }
